@@ -583,6 +583,7 @@ footer .copy {
     h2.title {
         font-size: 3rem;
         line-height: 2.5rem;
+        text-align: center;
     }
 }
 
