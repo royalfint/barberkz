@@ -1,0 +1,18 @@
+<% include ./panel_header %>
+
+              <div class="flex-grid">
+                  <div>
+                    <h2>Добавить услугу</h2>
+                    <form action="/services-add" method="POST">
+                      <input type="text" name="title" placeholder="Название">
+                      <input type="text" name="img" placeholder="URL Картинки">
+                      <input type="text" name="desc" placeholder="Описание">
+                      <input type="number" name="price" placeholder="Стоимость">
+                      <input type="submit" value="Добавить">
+                    </form>
+                  </div>
+              </div>
+      </main>
+  </div>
+  
+<% include ./panel_footer %>

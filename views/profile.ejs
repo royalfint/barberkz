@@ -1,0 +1,18 @@
+<% include ./panel_header %>
+
+              <div class="flex-grid">
+                  <div>
+                    <h2>Ваш профиль</h2>
+                    <p>Ваше логин: <%= profile.username %></p>
+                    <p>Ваше имя: <%= profile.name %></p>
+                    <% if(profile.status == 0) { %>
+                      <p>Статус: Мастер</p>
+                    <% } else if(profile.status == 9) { %>
+                      <p>Статус: Администратор</p>
+                    <% } %>
+                  </div>
+              </div>
+      </main>
+  </div>
+  
+<% include ./panel_footer %>

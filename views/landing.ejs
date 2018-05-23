@@ -10,13 +10,13 @@
     <div class="header block">
         <img src="img/logo.png" class="logo" alt="">
         <div class="menu">
-            <a href="#" class="active">главная</a>
-            <a href="#">услуги</a>
-            <a href="#">работы</a>
-            <a href="#">контакты</a>
+            <a href="#home" class="active">главная</a>
+            <a href="#service">услуги</a>
+            <a href="#gallery">работы</a>
+            <a href="#contacts">контакты</a>
         </div>
     </div>
-    <div class="hero block">
+    <div class="hero block" id="home">
         <h3 class="title">Найди свой</h3>
         <h2>Идеальный стиль</h2>
         <h4>В нашем Barbershop, мы настроены предлагать доступные и очень профессиональные стрижки и укладки, которые были персонально
@@ -26,7 +26,7 @@
         <p class="cap">будь
             <br>шикарен</p>
     </div>
-    <div class="service block">
+    <div class="service block" id="service">
         <img src="img/leftbig.png" alt="" class="leftbig">
         <img src="img/leftsmall.png" class="leftsmall" alt="">
         <div class="service-wrap">
@@ -43,7 +43,7 @@
                         </div>
                         <div>
                             <h3>Модельная стрижка</h3>
-                            <h4>1500тг</h4>
+                            <h4>5000тг</h4>
                         </div>
                     </div>
                     <div>
@@ -103,7 +103,7 @@
                         </div>
                         <div>
                             <h3>стрижка и бритье</h3>
-                            <h4>5500тг</h4>
+                            <h4>6500тг</h4>
                         </div>
                     </div>
                     <div>
@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <div class="gallery">
+    <div class="gallery" id="gallery">
         <div class="head block">
             <h3 class="title">довольные клиенты и</h3>
             <h2 class="title">Наши работы</h2>
@@ -150,7 +150,7 @@
         </div>
         <p class="cap">Стиль</p>
     </div>
-    <div class="map block">
+    <div class="map block" id="contacts">
         <h3 class="title">свяжись с нами</h3>
         <h2 class="title" id="ourcont">Наши контакты</h2>
         <p class="title">Можешь найти нас по адресу</p>
@@ -185,6 +185,16 @@
         links: false
     });
     userFeed.run();
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
     </script>
 </body>
 

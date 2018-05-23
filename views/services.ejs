@@ -1,0 +1,33 @@
+<% include ./panel_header %>
+
+              <div class="flex-grid">
+                  <div>
+                    <h2>Список услуг компании</h2>
+                    <% if (error && error.length > 0) { %>
+                        <p class="error"><img src="./img/error.svg" class="icon" alt=""> <%= error %></p>
+                    <% } %>
+                    <a href="/services-add">Добавить Услугу</a>
+                    <table>
+                      <tr>
+                        <td>Картинка</td>
+                        <td>Услуга</td>
+                        <td>Описание</td>
+                        <td>Стоимость</td>
+                        <td>Изменить</td>
+                      </tr>
+                      <% services.forEach(function(service) { %>
+                        <tr>
+                          <td>service.img</td>
+                          <td>service.title</td>
+                          <td>service.desc</td>
+                          <td>service.price</td>
+                          <td><a href="#"><img src="./img/edit.svg" /></a></td>
+                        </tr>
+                      <% }); %>
+                    </table>
+                  </div>
+              </div>
+      </main>
+  </div>
+  
+<% include ./panel_footer %>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Админ панель</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+              <header>
+                Привет, <%= currentUser.name %>
+                <div class="close" onclick="closeNav()"><img src="./img/cancel.svg"></div>
+              </header>
+              <ul>
+                <li><span>Навигация</span></li>
+                <% if(level == 9) { %>
+                  <li><img src="./img/profile.svg" alt=""> <a href="/profile">Профиль</a></li>
+                  <li><img src="./img/customer.svg" alt=""> <a href="/masters">Мастера</a></li>
+                  <li><img src="./img/information.svg" alt=""> <a href="/services">Услуги</a></li>
+                  <li><img src="./img/calendar.svg" alt=""> <a href="/hours">Часы работы</a></li>
+                <% } else { %>
+                  <li><img src="./img/profile.svg" alt=""> <a href="/profile">Профиль</a></li>
+                  <li><img src="./img/calendar.svg" alt=""> <a href="/schedule">График</a></li>
+                  <li><img src="./img/customer.svg" alt=""> <a href="/clients">Клиенты</a></li>
+                <% } %>
+              </ul>
+            </nav>
+            <main>
+              <div class="bar">
+                <div>
+                  <img src="./img/logo-dark.png" class="logo" onclick="openNav()"></img>
+                </div>
+              </div>
